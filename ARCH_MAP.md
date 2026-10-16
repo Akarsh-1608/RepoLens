@@ -32,4 +32,6 @@ RepoLens is an AI-powered codebase intelligence platform built with React + Vite
 - Added standalone SQL migration scripts in `database/migrations/`, root `.env.example`, and a comprehensive production `README.md`.
 - Initialized isolated Git repository on `main` branch and recorded initial root commit (`cab62fc`) with all verified project assets.
 - Configured remote tracking repository at `https://github.com/Akarsh-1608/RepoLens.git` under `origin`. Pushed the local `main` branch to upstream origin and established default branch tracking.
+- Configured dynamic SSL support in `server/src/db/pool.js` to automatically enable TLS for remote cloud PostgreSQL connections. Sanitized environment configuration to handle URI-encoded special characters in database connection strings.
+- Configured Supabase IPv4 connection pooler endpoint (`aws-0-ap-northeast-2.pooler.supabase.com`) with tenant credentials in `server/.env`. Executed all database migrations, initializing the repository schema and pgvector IVFFlat index.
 

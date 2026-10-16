@@ -7,11 +7,16 @@ let pool;
 
 export function getPool() {
   if (!pool) {
+    const isRemote = config.databaseUrl && 
+      !config.databaseUrl.includes('localhost') && 
+      !config.databaseUrl.includes('127.0.0.1');
+
     pool = new Pool({
       connectionString: config.databaseUrl,
       max: 20,
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 5000,
+      ...(isRemote ? { ssl: { rejectUnauthorized: false } } : {}),
     });
 
     pool.on('error', (err) => {
