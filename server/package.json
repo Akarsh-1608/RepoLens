@@ -1,0 +1,32 @@
+{
+  "name": "repolens-server",
+  "version": "1.0.0",
+  "description": "RepoLens backend API server",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:migrate": "node src/db/migrate.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bullmq": "^5.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "ioredis": "^5.4.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.13.1",
+    "uuid": "^11.0.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "vitest": "^3.0.5"
+  }
+}
