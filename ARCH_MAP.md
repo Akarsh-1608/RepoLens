@@ -31,4 +31,5 @@ RepoLens is an AI-powered codebase intelligence platform built with React + Vite
 - Installed missing frontend dependencies, added SVG `GithubIcon`, verified Vite client build, and expanded unit test coverage to 42 passing tests across 5 suites.
 - Added standalone SQL migration scripts in `database/migrations/`, root `.env.example`, and a comprehensive production `README.md`.
 - Initialized isolated Git repository on `main` branch and recorded initial root commit (`cab62fc`) with all verified project assets.
+- Configured remote tracking repository at `https://github.com/Akarsh-1608/RepoLens.git` under `origin`. Pushed the local `main` branch to upstream origin and established default branch tracking.
 
